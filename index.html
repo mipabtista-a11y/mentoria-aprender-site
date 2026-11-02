@@ -50,13 +50,13 @@ a{color:var(--green)}
 .nav .btn{min-height:44px;padding:10px 22px;font-size:15px;box-shadow:none}
 /* hero */
 .hero{padding:60px 0 64px;background:radial-gradient(900px 520px at 88% 30%,var(--sage) 0%,rgba(228,237,226,0) 70%)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,0.92fr);gap:56px;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,0.92fr);gap:56px;align-items:start}
 .hero h1{font-size:clamp(31px,5vw,50px);font-weight:600;letter-spacing:-.4px}
 .hero .sub{font-size:19px;color:var(--muted);margin-top:22px;max-width:560px}
 .hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
 .offer{display:inline-flex;margin-top:26px;background:var(--white);border:1px solid var(--sage2);border-radius:16px;padding:12px 18px;font-size:15px;color:var(--green-d)}
 .micro{font-size:14px;color:var(--muted);margin-top:14px}
-.photo{position:relative}
+.photo{position:sticky;top:96px}
 .photo:before{content:"";position:absolute;inset:26px -16px -16px 26px;background:var(--sage2);border-radius:38px;z-index:0}
 .hp{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:32px;box-shadow:0 18px 44px rgba(47,74,56,.18)}
 .cap{position:absolute;z-index:2;left:-18px;bottom:30px;background:var(--white);border-radius:18px;padding:14px 20px;box-shadow:0 10px 28px rgba(47,74,56,.16);display:flex;flex-direction:column;line-height:1.35}
@@ -83,6 +83,22 @@ a{color:var(--green)}
 .num{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center;flex:none}
 .pill{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
 .pill span{background:var(--white);border:1px solid var(--sage2);color:var(--green-d);border-radius:999px;padding:9px 18px;font-weight:700;font-size:15px}
+/* pergunta gancho */
+.hook{background:var(--green-d);border-radius:22px;padding:20px 24px 22px;margin-bottom:28px;max-width:580px;box-shadow:0 14px 34px rgba(47,74,56,.22)}
+.hook .hq{display:inline-block;font-weight:700;font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;color:#CFE0CE}
+.hook p{font-family:'Fraunces',Georgia,serif;font-size:clamp(25px,4vw,33px);line-height:1.2;font-weight:600;color:#fff;margin-top:8px}
+.hook p b{color:#F0E3BE;font-weight:700}
+.hook .ha{display:block;margin-top:12px;font-size:15.5px;line-height:1.5;color:#DCE6D8}
+/* ritmo */
+.pace{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.pace div{background:var(--white);border:1px solid var(--sage2);border-radius:16px;padding:12px 18px;display:flex;flex-direction:column;line-height:1.2}
+.pace b{font-family:'Fraunces',serif;font-size:24px;color:var(--green-d)}
+.pace span{font-size:13.5px;color:var(--muted);margin-top:4px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-bottom:22px}
+.stat{background:var(--green);color:#fff;border-radius:26px;padding:30px;display:flex;flex-direction:column;gap:8px}
+.stat b{font-family:'Fraunces',serif;font-size:clamp(42px,6vw,58px);line-height:1;font-weight:700}
+.stat span{font-size:16.5px;color:#DCE9DA}
+.stat.alt{background:var(--green-d)}
 /* demo */
 .demo{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);gap:28px;align-items:start}
 .act{background:var(--white);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 12px 34px rgba(47,74,56,.08)}
@@ -170,7 +186,7 @@ details p{padding:0 22px 20px;font-size:16px;color:var(--muted)}
 .faq,.two{grid-template-columns:1fr}
 .trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
 .hero .wrap{grid-template-columns:1fr;gap:44px}
-.photo{max-width:480px;margin:0 auto;width:100%}
+.photo{max-width:480px;margin:0 auto;width:100%;position:relative;top:auto}
 }
 @media (max-width:760px){
 body{font-size:16.5px;padding-bottom:84px}
@@ -180,7 +196,8 @@ body{font-size:16.5px;padding-bottom:84px}
 .top .wrap{justify-content:center}
 .hero{padding:34px 0 44px}
 .hero .cta .btn{width:100%}
-.grid4,.grid3,.fine{grid-template-columns:1fr}
+.grid4,.grid3,.fine,.stats{grid-template-columns:1fr}
+.stat{padding:24px}
 .trust .wrap{grid-template-columns:1fr;gap:12px}
 .price .l,.price .r{padding:30px 24px}
 .amount{font-size:46px}
@@ -219,6 +236,7 @@ body{font-size:16.5px;padding-bottom:84px}
 <section class="hero" id="inicio">
 <div class="wrap">
 <div>
+<div class="hook"><span class="hq">Uma pergunta antes de tudo</span><p>Você tem <b>15 minutos</b> por dia para o seu filho?</p><span class="ha">Se a resposta é sim, a Mentoria cuida do resto: o plano, o passo a passo e a orientação.</span></div>
 <div class="eyebrow">Mentoria psicopedagógica para famílias</div>
 <h1 style="margin-top:14px">Aprender pode ser mais leve com um plano de estímulos de habilidades personalizado para o seu filho.</h1>
 <p class="sub">Toda semana, sua família recebe um plano de atividades pensado para a criança, preparado e revisado por uma neuropsicopedagoga. Você conduz em casa, com passo a passo e orientação profissional.</p>
@@ -242,6 +260,30 @@ body{font-size:16.5px;padding-bottom:84px}
 <div class="ti"><span class="ck">✓</span>Você conduz em casa, com passo a passo</div>
 <div class="ti"><span class="ck">✓</span>Sem fidelidade, cancele quando quiser</div>
 <div class="ti"><span class="ck">✓</span>Pagamento online seguro</div>
+</div>
+</section>
+
+<!-- RITMO E ECONOMIA -->
+<section class="sec g" id="rotina">
+<div class="wrap">
+<div class="head">
+<div class="eyebrow">Cabe na sua rotina e no seu orçamento</div>
+<h2 class="h2">Pouco tempo, mais cuidado com o seu filho</h2>
+<p class="lead">Você não precisa reorganizar a casa nem a agenda. A Mentoria foi pensada para caber nos dias reais da família.</p>
+</div>
+<div class="stats">
+<div class="stat"><b>15 min</b><span>é o tempo de cada atividade</span></div>
+<div class="stat alt"><b>1 por dia</b><span>uma atividade curta, sem pressa</span></div>
+<div class="stat"><b>4 dias</b><span>por semana, e só isso</span></div>
+</div>
+<div class="grid4">
+<div class="card"><span class="dot"></span><h3>Economia de tempo</h3><p>Só 15 minutos por dia, 4 dias por semana. Sem deslocamento e sem horário marcado de clínica.</p></div>
+<div class="card"><span class="dot"></span><h3>Logística simples</h3><p>Você conduz em casa, no horário que couber na rotina, com objetos que você já tem.</p></div>
+<div class="card"><span class="dot"></span><h3>Você entende as dificuldades</h3><p>Ao conduzir as atividades, você observa de perto como o seu filho aprende e passa a entender melhor onde estão as dificuldades.</p></div>
+<div class="card"><span class="dot"></span><h3>Economia no orçamento</h3><p>Um valor mensal claro, sem fidelidade e sem gastos com deslocamento. Você cuida da aprendizagem em casa, sem pesar no orçamento da família.</p></div>
+</div>
+<p class="note">Formato de 1 atividade por dia. Conforme a idade, também é possível escolher 2 por dia ou, a partir dos 9 anos, fazer as 4 atividades da semana no mesmo dia.</p>
+<div style="margin-top:30px"><a class="btn" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a></div>
 </div>
 </section>
 
@@ -295,7 +337,7 @@ body{font-size:16.5px;padding-bottom:84px}
 <div class="bar"><span>Exemplo ilustrativo</span><span>Atenção e memória de trabalho</span></div>
 <div class="bd">
 <h3>Entregador de recados</h3>
-<div class="meta"><span>Cerca de 10 minutos</span><span>3 objetos da casa</span><span>Em forma de brincadeira</span></div>
+<div class="meta"><span>Cerca de 15 minutos</span><span>3 objetos da casa</span><span>Em forma de brincadeira</span></div>
 <ol class="ol">
 <li>Combine com a criança que ela será a “entregadora de recados”.</li>
 <li>Diga um recado curto com 2 tarefas: “Pegue a colher e coloque sobre o livro”.</li>
@@ -350,7 +392,7 @@ body{font-size:16.5px;padding-bottom:84px}
 <div class="step"><div class="num">1</div><div class="tx"><h3>Você começa a Mentoria</h3><p>Cria a conta, cadastra seu filho e responde a uma triagem sobre as dificuldades e a rotina.</p></div></div>
 <div class="step"><div class="num">2</div><div class="tx"><h3>Conversa de acolhimento</h3><p>Um encontro online de 30 minutos, em horário que você escolhe. É opcional: se preferir, o plano sai com as respostas da triagem.</p></div></div>
 <div class="step"><div class="num">3</div><div class="tx"><h3>Plano semanal personalizado</h3><p>Atividades preparadas e revisadas por neuropsicopedagoga, com objetivo e passo a passo.</p></div></div>
-<div class="step"><div class="num">4</div><div class="tx"><h3>Você conduz em casa</h3><p>Escolha o formato que cabe na rotina, com opções de 1, 2 ou 4 atividades por dia, conforme a idade.</p></div></div>
+<div class="step"><div class="num">4</div><div class="tx"><h3>Você conduz em casa</h3><p>Cada atividade leva cerca de 15 minutos. Escolha o formato que cabe na rotina: 1, 2 ou 4 por dia, conforme a idade.</p></div></div>
 <div class="step"><div class="num">5</div><div class="tx"><h3>Acompanhamento mensal</h3><p>Semana após semana, chegam novos planos e você segue com orientação ao longo do mês.</p></div></div>
 </div>
 <div style="margin-top:44px"><a class="btn" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a></div>
@@ -437,7 +479,7 @@ body{font-size:16.5px;padding-bottom:84px}
 <details><summary>Preciso ter formação para aplicar as atividades?</summary><p>Não. Cada plano traz o passo a passo, e a família conduz com a orientação da Mentoria.</p></details>
 <details><summary>Meu filho já tem diagnóstico ou faz terapia. Posso usar a Mentoria?</summary><p>Pode, como complemento. A Mentoria não substitui o acompanhamento que já existe. Vale conversar com os outros profissionais sobre as atividades.</p></details>
 <details><summary>A Mentoria substitui terapia ou avaliação?</summary><p>Não. É um suporte psicopedagógico orientado e não faz diagnóstico. Quando for preciso, a família é orientada a buscar avaliação profissional.</p></details>
-<details><summary>Quanto tempo preciso por dia?</summary><p>Você escolhe o formato da semana: 1, 2 ou 4 atividades por dia, conforme a idade e a rotina da família. As atividades são curtas.</p></details>
+<details><summary>Quanto tempo preciso por dia?</summary><p>Cada atividade leva cerca de 15 minutos. O plano da semana tem 4 atividades: no formato de 1 por dia, são só 4 dias por semana. Conforme a idade, você também pode escolher 2 por dia ou, a partir dos 9 anos, as 4 no mesmo dia.</p></details>
 <details><summary>Em quanto tempo vou ver resultados?</summary><p>Cada criança tem o seu ritmo, e não é possível prometer prazos ou resultados. O que a Mentoria oferece é constância: atividades bem escolhidas, toda semana, com orientação.</p></details>
 </div>
 <div class="col">
@@ -454,6 +496,7 @@ body{font-size:16.5px;padding-bottom:84px}
 <!-- 10. CHAMADA FINAL -->
 <section class="sec final">
 <div class="wrap">
+<div class="eyebrow" style="color:#CFE0CE">Então, a resposta é sim?</div>
 <h2>Dê o primeiro passo por um aprender mais leve</h2>
 <p>Comece a Mentoria e receba um plano pensado para o seu filho, com orientação de quem entende de aprendizagem.</p>
 <a class="btn light" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
