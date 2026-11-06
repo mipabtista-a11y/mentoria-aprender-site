@@ -426,7 +426,7 @@ body.en .en-only{display:block}
 <div class="price">
 <div class="l">
 <div data-en="Monthly follow-up" style="font-weight:700;color:#CFE0CE">Acompanhamento mensal</div>
-<div class="amount" data-en="US$ 149.00&lt;small&gt;per month, per child&lt;/small&gt;">R$ 149,90<small>por mês, por criança</small></div>
+<div class="amount" data-en="US$ 149.90&lt;small&gt;per month, per child&lt;/small&gt;">R$ 149,90<small>por mês, por criança</small></div>
 <div class="promo pt-only" data-en='&lt;b&gt;November offer&lt;/b&gt;First month for US$ 79.90. Enter the coupon &lt;span class="coupon"&gt;NOVEMBRO79&lt;/span&gt; at checkout. Valid for those who start in November.'><b>Oferta de novembro</b>Primeiro mês por R$ 79,90. Digite o cupom <span class="coupon">NOVEMBRO79</span> na tela de pagamento. Válido para quem começar em novembro.</div>
 </div>
 <div class="r">
@@ -536,6 +536,10 @@ e.innerHTML=en?e.getAttribute("data-en"):e.getAttribute("data-pt");
 d.querySelectorAll("[data-alt-en]").forEach(function(e){
 if(e.getAttribute("data-alt-pt")===null)e.setAttribute("data-alt-pt",e.getAttribute("alt")||"");
 e.setAttribute("alt",en?e.getAttribute("data-alt-en"):e.getAttribute("data-alt-pt"));
+});
+d.querySelectorAll('a[href^="https://mentoria-aprender-hkcu.vercel.app"]').forEach(function(a){
+if(a.getAttribute("data-hpt")===null)a.setAttribute("data-hpt",a.getAttribute("href"));
+a.setAttribute("href",en?a.getAttribute("data-hpt")+"?lang=en":a.getAttribute("data-hpt"));
 });
 d.querySelectorAll(".lang button").forEach(function(b){
 var on=b.getAttribute("data-l")===l;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");
