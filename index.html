@@ -524,6 +524,12 @@ body.en .en-only{display:block}
 <script>
 (function(){
 var d=document,TT={pt:d.title,en:"Mentoria A.P.R.E.N.D.E.R. | Guided psychopedagogical support"};
+function links(en){
+d.querySelectorAll('a[href^="https://mentoria-aprender-hkcu.vercel.app"]').forEach(function(a){
+if(a.getAttribute("data-hpt")===null)a.setAttribute("data-hpt",a.getAttribute("href"));
+a.setAttribute("href",a.getAttribute("data-hpt")+(en?"?lang=en":"?lang=pt"));
+});
+}
 function set(l){
 var en=l==="en";
 d.documentElement.lang=en?"en":"pt-BR";
@@ -537,10 +543,7 @@ d.querySelectorAll("[data-alt-en]").forEach(function(e){
 if(e.getAttribute("data-alt-pt")===null)e.setAttribute("data-alt-pt",e.getAttribute("alt")||"");
 e.setAttribute("alt",en?e.getAttribute("data-alt-en"):e.getAttribute("data-alt-pt"));
 });
-d.querySelectorAll('a[href^="https://mentoria-aprender-hkcu.vercel.app"]').forEach(function(a){
-if(a.getAttribute("data-hpt")===null)a.setAttribute("data-hpt",a.getAttribute("href"));
-a.setAttribute("href",en?a.getAttribute("data-hpt")+"?lang=en":a.getAttribute("data-hpt"));
-});
+links(en);
 d.querySelectorAll(".lang button").forEach(function(b){
 var on=b.getAttribute("data-l")===l;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");
 });
@@ -550,6 +553,7 @@ var m=location.search.match(/[?&]lang=(en|pt)/),q=m?m[1]:null,st=null;
 try{st=localStorage.getItem("lang")}catch(x){}
 d.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){set(b.getAttribute("data-l"))})});
 var init=q||st||"pt";
+links(init==="en");
 if(init==="en")set("en");
 })();
 </script>
