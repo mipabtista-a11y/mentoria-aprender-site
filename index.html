@@ -211,6 +211,14 @@ body{font-size:16.5px;padding-bottom:84px}
 .sticky .t b{display:block;color:var(--green-d);font-size:15px}
 .sticky .btn{min-height:48px;padding:10px 20px;font-size:15.5px;white-space:nowrap;box-shadow:none}
 }
+
+.lang{display:flex;gap:3px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:3px;flex:none}
+.lang button{border:0;background:transparent;font:700 13px/1 'Nunito',sans-serif;color:var(--muted);padding:8px 13px;border-radius:999px;cursor:pointer;min-height:34px}
+.lang button.on{background:var(--green);color:#fff}
+.en-only{display:none}
+body.en .pt-only{display:none}
+body.en .en-only{display:block}
+@media (max-width:760px){.top .wrap{justify-content:space-between}.logo{font-size:17px}}
 </style>
 <style>html{scroll-behavior:smooth}</style>
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
@@ -218,298 +226,287 @@ body{font-size:16.5px;padding-bottom:84px}
 </head>
 <body>
 <div>
-
 <header class="top">
 <div class="wrap">
 <a class="logo" href="#inicio">Mentoria A.P.R.E.N.D.E.R.</a>
 <nav class="nav">
-<a class="l" href="#como-funciona">Como funciona</a>
-<a class="l" href="#exemplo">Exemplo</a>
-<a class="l" href="#valores">Valores</a>
-<a class="l" href="#perguntas">Perguntas</a>
-<a class="btn" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
+<a class="l" data-en="How it works" href="#como-funciona">Como funciona</a>
+<a class="l" data-en="Example" href="#exemplo">Exemplo</a>
+<a class="l" data-en="Pricing" href="#valores">Valores</a>
+<a class="l" data-en="FAQ" href="#perguntas">Perguntas</a>
+<a class="btn" data-en="Start the Mentoria" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
 </nav>
+<div aria-label="Idioma / Language" class="lang" role="group"><button aria-pressed="true" class="on" data-l="pt" type="button">PT</button><button aria-pressed="false" data-l="en" type="button">EN</button></div>
 </div>
 </header>
-
 <!-- 1. PRIMEIRA TELA -->
 <section class="hero" id="inicio">
 <div class="wrap">
 <div>
-<div class="hook"><span class="hq">Uma pergunta antes de tudo</span><p>Você tem <b>15 minutos</b> por dia para o seu filho?</p><span class="ha">Se a resposta é sim, a Mentoria cuida do resto: o plano, o passo a passo e a orientação.</span></div>
-<div class="eyebrow">Mentoria psicopedagógica para famílias</div>
-<h1 style="margin-top:14px">Aprender pode ser mais leve com um plano de estímulos de habilidades personalizado para o seu filho.</h1>
-<p class="sub">Toda semana, sua família recebe um plano de atividades pensado para a criança, preparado e revisado por uma neuropsicopedagoga. Você conduz em casa, com passo a passo e orientação profissional.</p>
+<div class="hook"><span class="hq" data-en="One question before anything else">Uma pergunta antes de tudo</span><p data-en="Do you have &lt;b&gt;15 minutes&lt;/b&gt; a day for your child?">Você tem <b>15 minutos</b> por dia para o seu filho?</p><span class="ha" data-en="If the answer is yes, the Mentoria takes care of the rest: the plan, the step-by-step guide and the professional support.">Se a resposta é sim, a Mentoria cuida do resto: o plano, o passo a passo e a orientação.</span></div>
+<div class="eyebrow" data-en="Psychopedagogical mentoring for families">Mentoria psicopedagógica para famílias</div>
+<h1 data-en="Learning can feel lighter with a personalized skill-stimulation plan made for your child." style="margin-top:14px">Aprender pode ser mais leve com um plano de estímulos de habilidades personalizado para o seu filho.</h1>
+<p class="sub" data-en="Every week, your family receives an activity plan designed for your child, prepared and reviewed by a neuropsychopedagogue (a specialist in learning and the brain). You guide it at home, with step-by-step instructions and professional support.">Toda semana, sua família recebe um plano de atividades pensado para a criança, preparado e revisado por uma neuropsicopedagoga. Você conduz em casa, com passo a passo e orientação profissional.</p>
 <div class="cta">
-<a class="btn" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
-<a class="btn ghost" href="#como-funciona">Ver como funciona</a>
+<a class="btn" data-en="Start the Mentoria" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
+<a class="btn ghost" data-en="See how it works" href="#como-funciona">Ver como funciona</a>
 </div>
-<div class="offer"><span><b>Oferta de novembro:</b> primeiro mês por R$ 79,90 com o cupom <b>NOVEMBRO79</b></span></div>
-<p class="micro">Para crianças e adolescentes de 2 a 14 anos. Sem fidelidade: cancele quando quiser.</p>
+<div class="offer"><span data-en="&lt;b&gt;November offer:&lt;/b&gt; first month for US$ 79.90 with the coupon &lt;b&gt;NOVEMBRO79&lt;/b&gt;"><b>Oferta de novembro:</b> primeiro mês por R$ 79,90 com o cupom <b>NOVEMBRO79</b></span></div>
+<p class="micro" data-en="For children and teens from 2 to 14 years old. No lock-in: cancel anytime.">Para crianças e adolescentes de 2 a 14 anos. Sem fidelidade: cancele quando quiser.</p>
+<p class="micro en-only">Note: the Mentoria and its app are currently in Portuguese.</p>
 </div>
 <div class="photo">
-<img class="hp" width="720" height="900" fetchpriority="high" src="michelle-consultorio.jpg" alt="Michelle Giannotti Baptista, neuropsicopedagoga, sorrindo em seu consultório">
-<div class="cap"><b>Michelle Giannotti Baptista</b><span>Neuropsicopedagoga</span></div>
+<img alt="Michelle Giannotti Baptista, neuropsicopedagoga, sorrindo em seu consultório" class="hp" data-alt-en="Michelle Giannotti Baptista, neuropsychopedagogue, smiling in her office" fetchpriority="high" height="900" src="michelle-consultorio.jpg" width="720"/>
+<div class="cap"><b>Michelle Giannotti Baptista</b><span data-en="Neuropsychopedagogue">Neuropsicopedagoga</span></div>
 </div>
 </div>
 </section>
-
 <section class="trust">
 <div class="wrap">
-<div class="ti"><span class="ck">✓</span>Plano revisado por neuropsicopedagoga</div>
-<div class="ti"><span class="ck">✓</span>Você conduz em casa, com passo a passo</div>
-<div class="ti"><span class="ck">✓</span>Sem fidelidade, cancele quando quiser</div>
-<div class="ti"><span class="ck">✓</span>Pagamento online seguro</div>
+<div class="ti" data-en='&lt;span class="ck"&gt;✓&lt;/span&gt;Plan reviewed by a neuropsychopedagogue'><span class="ck">✓</span>Plano revisado por neuropsicopedagoga</div>
+<div class="ti" data-en='&lt;span class="ck"&gt;✓&lt;/span&gt;You guide it at home, step by step'><span class="ck">✓</span>Você conduz em casa, com passo a passo</div>
+<div class="ti" data-en='&lt;span class="ck"&gt;✓&lt;/span&gt;No lock-in, cancel anytime'><span class="ck">✓</span>Sem fidelidade, cancele quando quiser</div>
+<div class="ti" data-en='&lt;span class="ck"&gt;✓&lt;/span&gt;Secure online payment'><span class="ck">✓</span>Pagamento online seguro</div>
 </div>
 </section>
-
 <!-- RITMO E ECONOMIA -->
 <section class="sec g" id="rotina">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow">Cabe na sua rotina e no seu orçamento</div>
-<h2 class="h2">Pouco tempo, mais cuidado com o seu filho</h2>
-<p class="lead">Você não precisa reorganizar a casa nem a agenda. A Mentoria foi pensada para caber nos dias reais da família.</p>
+<div class="eyebrow" data-en="Fits your routine and your budget">Cabe na sua rotina e no seu orçamento</div>
+<h2 class="h2" data-en="Little time, more care for your child">Pouco tempo, mais cuidado com o seu filho</h2>
+<p class="lead" data-en="You don't need to reorganize your home or your schedule. The Mentoria was designed to fit into a family's real days.">Você não precisa reorganizar a casa nem a agenda. A Mentoria foi pensada para caber nos dias reais da família.</p>
 </div>
 <div class="stats">
-<div class="stat"><b>15 min</b><span>é o tempo de cada atividade</span></div>
-<div class="stat alt"><b>1 por dia</b><span>uma atividade curta, sem pressa</span></div>
-<div class="stat"><b>4 dias</b><span>por semana, e só isso</span></div>
+<div class="stat"><b>15 min</b><span data-en="is the time of each activity">é o tempo de cada atividade</span></div>
+<div class="stat alt"><b data-en="1 a day">1 por dia</b><span data-en="one short activity, no rush">uma atividade curta, sem pressa</span></div>
+<div class="stat"><b data-en="4 days">4 dias</b><span data-en="a week, and that's all">por semana, e só isso</span></div>
 </div>
 <div class="grid4">
-<div class="card"><span class="dot"></span><h3>Economia de tempo</h3><p>Só 15 minutos por dia, 4 dias por semana. Sem deslocamento e sem horário marcado de clínica.</p></div>
-<div class="card"><span class="dot"></span><h3>Logística simples</h3><p>Você conduz em casa, no horário que couber na rotina, com objetos que você já tem.</p></div>
-<div class="card"><span class="dot"></span><h3>Você entende as dificuldades</h3><p>Ao conduzir as atividades, você observa de perto como o seu filho aprende e passa a entender melhor onde estão as dificuldades.</p></div>
-<div class="card"><span class="dot"></span><h3>Economia no orçamento</h3><p>Um valor mensal claro, sem fidelidade e sem gastos com deslocamento. Você cuida da aprendizagem em casa, sem pesar no orçamento da família.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Saves time">Economia de tempo</h3><p data-en="Just 15 minutes a day, 4 days a week. No travel and no clinic appointments.">Só 15 minutos por dia, 4 dias por semana. Sem deslocamento e sem horário marcado de clínica.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Simple logistics">Logística simples</h3><p data-en="You guide it at home, at whatever time fits your routine, with objects you already have.">Você conduz em casa, no horário que couber na rotina, com objetos que você já tem.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="You understand the difficulties">Você entende as dificuldades</h3><p data-en="As you guide the activities, you watch closely how your child learns and come to understand where the difficulties are.">Ao conduzir as atividades, você observa de perto como o seu filho aprende e passa a entender melhor onde estão as dificuldades.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Saves on your budget">Economia no orçamento</h3><p data-en="A clear monthly price, no lock-in and no travel costs. You support your child's learning at home, without straining the family budget.">Um valor mensal claro, sem fidelidade e sem gastos com deslocamento. Você cuida da aprendizagem em casa, sem pesar no orçamento da família.</p></div>
 </div>
-<p class="note">Formato de 1 atividade por dia. Conforme a idade, também é possível escolher 2 por dia ou, a partir dos 9 anos, fazer as 4 atividades da semana no mesmo dia.</p>
-<div style="margin-top:30px"><a class="btn" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a></div>
+<p class="note" data-en="Format of 1 activity a day. Depending on age, you can also choose 2 a day or, from age 9, do all 4 activities of the week on the same day.">Formato de 1 atividade por dia. Conforme a idade, também é possível escolher 2 por dia ou, a partir dos 9 anos, fazer as 4 atividades da semana no mesmo dia.</p>
+<div style="margin-top:30px"><a class="btn" data-en="Start the Mentoria" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a></div>
 </div>
 </section>
-
 <!-- 2. DIFICULDADES DOS PAIS -->
 <section class="sec">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow">Você não está sozinha(o) nisso</div>
-<h2 class="h2">Você reconhece alguma destas cenas?</h2>
-<p class="lead">Muitas famílias chegam até aqui depois de tentar de tudo. Estes são sinais de atenção, não diagnósticos.</p>
+<div class="eyebrow" data-en="You are not alone in this">Você não está sozinha(o) nisso</div>
+<h2 class="h2" data-en="Do you recognize any of these scenes?">Você reconhece alguma destas cenas?</h2>
+<p class="lead" data-en="Many families get here after trying everything. These are warning signs, not diagnoses.">Muitas famílias chegam até aqui depois de tentar de tudo. Estes são sinais de atenção, não diagnósticos.</p>
 </div>
 <div class="grid4">
-<div class="card"><span class="dot"></span><h3>A lição de casa termina em choro</h3><p>O que deveria levar 20 minutos vira uma hora de discussão, e todo mundo termina o dia exausto.</p></div>
-<div class="card"><span class="dot"></span><h3>Esquece o que acabou de ouvir</h3><p>Instruções simples precisam ser repetidas várias vezes, e a atenção se perde no meio do caminho.</p></div>
-<div class="card"><span class="dot"></span><h3>Ler e escrever custa mais</h3><p>A leitura, a escrita ou a matemática avançam mais devagar do que você esperava para a idade.</p></div>
-<div class="card"><span class="dot"></span><h3>O medo de errar paralisa</h3><p>Diz que não sabe, desiste rápido e a confiança vai diminuindo.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Homework ends in tears">A lição de casa termina em choro</h3><p data-en="What should take 20 minutes turns into an hour of arguing, and everyone ends the day exhausted.">O que deveria levar 20 minutos vira uma hora de discussão, e todo mundo termina o dia exausto.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Forgets what they just heard">Esquece o que acabou de ouvir</h3><p data-en="Simple instructions have to be repeated several times, and attention drifts along the way.">Instruções simples precisam ser repetidas várias vezes, e a atenção se perde no meio do caminho.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Reading and writing take more effort">Ler e escrever custa mais</h3><p data-en="Reading, writing or math is moving more slowly than you expected for their age.">A leitura, a escrita ou a matemática avançam mais devagar do que você esperava para a idade.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Fear of making mistakes is paralyzing">O medo de errar paralisa</h3><p data-en="Says they don't know, gives up quickly and confidence keeps shrinking.">Diz que não sabe, desiste rápido e a confiança vai diminuindo.</p></div>
 </div>
-<div class="small"><p><b>E com os pequenos (2 a 5 anos)?</b> A fala que demora a aparecer, a dificuldade com lápis, tesoura e encaixes, ou com rotinas e frustrações também podem ser estimuladas com atividades certas, em casa.</p></div>
-<div class="pivot"><p>Quando a dificuldade aparece, é comum pensar que falta esforço. Muitas vezes é uma habilidade que ainda precisa de estímulo na medida certa, no ritmo da criança.</p></div>
-<p class="note">Se algo preocupa você, a Mentoria também ajuda a perceber quando é hora de buscar avaliação com outros profissionais. Ela não substitui avaliação e nem diagnóstico.</p>
+<div class="small"><p data-en="&lt;b&gt;And with the little ones (ages 2 to 5)?&lt;/b&gt; Speech that is slow to appear, difficulty with pencils, scissors and puzzle pieces, or with routines and frustration can also be stimulated with the right activities, at home."><b>E com os pequenos (2 a 5 anos)?</b> A fala que demora a aparecer, a dificuldade com lápis, tesoura e encaixes, ou com rotinas e frustrações também podem ser estimuladas com atividades certas, em casa.</p></div>
+<div class="pivot"><p data-en="When a difficulty appears, it is common to think effort is missing. Often it is a skill that still needs the right amount of stimulation, at the child's own pace.">Quando a dificuldade aparece, é comum pensar que falta esforço. Muitas vezes é uma habilidade que ainda precisa de estímulo na medida certa, no ritmo da criança.</p></div>
+<p class="note" data-en="If something worries you, the Mentoria also helps you recognize when it is time to seek an assessment from other professionals. It does not replace assessment or diagnosis.">Se algo preocupa você, a Mentoria também ajuda a perceber quando é hora de buscar avaliação com outros profissionais. Ela não substitui avaliação e nem diagnóstico.</p>
 </div>
 </section>
-
 <!-- 3. SOLUÇÃO -->
 <section class="sec w">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow">A solução</div>
-<h2 class="h2">A psicopedagogia dentro da sua rotina, com orientação de quem entende</h2>
-<p class="lead">A Mentoria Aprender une orientação profissional e atividades personalizadas para que você estimule, em casa, as habilidades que a criança precisa para aprender: atenção, memória, leitura, escrita, linguagem e organização.</p>
+<div class="eyebrow" data-en="The solution">A solução</div>
+<h2 class="h2" data-en="Psychopedagogy inside your routine, guided by someone who understands">A psicopedagogia dentro da sua rotina, com orientação de quem entende</h2>
+<p class="lead" data-en="The Mentoria Aprender combines professional guidance with personalized activities so that you can stimulate, at home, the skills your child needs to learn: attention, memory, reading, writing, language and organization.">A Mentoria Aprender une orientação profissional e atividades personalizadas para que você estimule, em casa, as habilidades que a criança precisa para aprender: atenção, memória, leitura, escrita, linguagem e organização.</p>
 </div>
 <div class="grid3">
-<div class="card"><div class="num">1</div><h3>Orientação psicopedagógica</h3><p>Uma conversa online para conhecer a criança, a rotina e as queixas da família. O plano nasce dessa escuta.</p></div>
-<div class="card"><div class="num">2</div><h3>Atividades personalizadas</h3><p>Jogos e desafios curtos, escolhidos para as habilidades do seu filho, sem material complicado.</p></div>
-<div class="card"><div class="num">3</div><h3>Acompanhamento no seu ritmo</h3><p>Um novo plano a cada semana, com passo a passo. Você escolhe o formato que cabe na rotina.</p></div>
+<div class="card"><div class="num">1</div><h3 data-en="Psychopedagogical guidance">Orientação psicopedagógica</h3><p data-en="An online conversation to get to know the child, the routine and the family's concerns. The plan is born from that listening.">Uma conversa online para conhecer a criança, a rotina e as queixas da família. O plano nasce dessa escuta.</p></div>
+<div class="card"><div class="num">2</div><h3 data-en="Personalized activities">Atividades personalizadas</h3><p data-en="Short games and challenges, chosen for your child's skills, with no complicated materials.">Jogos e desafios curtos, escolhidos para as habilidades do seu filho, sem material complicado.</p></div>
+<div class="card"><div class="num">3</div><h3 data-en="Support at your own pace">Acompanhamento no seu ritmo</h3><p data-en="A new plan every week, with step-by-step instructions. You choose the format that fits your routine.">Um novo plano a cada semana, com passo a passo. Você escolhe o formato que cabe na rotina.</p></div>
 </div>
-<div class="pill"><span>Pouco por vez</span><span>Brincar é aprender</span><span>Rotina com variação</span></div>
+<div class="pill"><span data-en="A little at a time">Pouco por vez</span><span data-en="Playing is learning">Brincar é aprender</span><span data-en="Routine with variation">Rotina com variação</span></div>
 </div>
 </section>
-
 <!-- 4. DEMONSTRAÇÃO -->
 <section class="sec" id="exemplo">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow">Veja por dentro</div>
-<h2 class="h2">Como é uma atividade da Mentoria</h2>
-<p class="lead">Um exemplo ilustrativo para você imaginar o dia a dia. Os planos reais são montados para cada criança.</p>
+<div class="eyebrow" data-en="See inside">Veja por dentro</div>
+<h2 class="h2" data-en="What a Mentoria activity looks like">Como é uma atividade da Mentoria</h2>
+<p class="lead" data-en="An illustrative example so you can picture everyday life. Real plans are built for each child.">Um exemplo ilustrativo para você imaginar o dia a dia. Os planos reais são montados para cada criança.</p>
 </div>
 <div class="demo">
 <div class="act">
-<div class="bar"><span>Exemplo ilustrativo</span><span>Atenção e memória de trabalho</span></div>
+<div class="bar"><span data-en="Illustrative example">Exemplo ilustrativo</span><span data-en="Attention and working memory">Atenção e memória de trabalho</span></div>
 <div class="bd">
-<h3>Entregador de recados</h3>
-<div class="meta"><span>Cerca de 15 minutos</span><span>3 objetos da casa</span><span>Em forma de brincadeira</span></div>
+<h3 data-en="Message courier">Entregador de recados</h3>
+<div class="meta"><span data-en="About 15 minutes">Cerca de 15 minutos</span><span data-en="3 household objects">3 objetos da casa</span><span data-en="Played as a game">Em forma de brincadeira</span></div>
 <ol class="ol">
-<li>Combine com a criança que ela será a “entregadora de recados”.</li>
-<li>Diga um recado curto com 2 tarefas: “Pegue a colher e coloque sobre o livro”.</li>
-<li>A criança repete o recado em voz alta e depois executa.</li>
-<li>Só aumente para 3 tarefas quando ela acertar com tranquilidade.</li>
+<li data-en="Tell your child they will be the “message courier”.">Combine com a criança que ela será a “entregadora de recados”.</li>
+<li data-en="Give a short message with 2 tasks: “Pick up the spoon and put it on the book.”">Diga um recado curto com 2 tarefas: “Pegue a colher e coloque sobre o livro”.</li>
+<li data-en="Your child repeats the message out loud and then carries it out.">A criança repete o recado em voz alta e depois executa.</li>
+<li data-en="Only move up to 3 tasks when they get it right comfortably.">Só aumente para 3 tarefas quando ela acertar com tranquilidade.</li>
 </ol>
-<div class="box g"><b>Olhar do adulto</b>Observe se ela precisa de repetição, se perde algum passo ou se se distrai no meio. Conte como foi no acompanhamento.</div>
-<div class="box y"><b>Como adaptar</b>Se ficou difícil, volte para 1 tarefa e use um gesto de apoio. Se ficou fácil, inclua objetos e ordens de posição.</div>
+<div class="box g" data-en="&lt;b&gt;The adult's eye&lt;/b&gt;Notice whether they need repetition, miss a step or get distracted halfway. Tell us how it went in the follow-up."><b>Olhar do adulto</b>Observe se ela precisa de repetição, se perde algum passo ou se se distrai no meio. Conte como foi no acompanhamento.</div>
+<div class="box y" data-en="&lt;b&gt;How to adapt&lt;/b&gt;If it was hard, go back to 1 task and use a gesture to help. If it was easy, add objects and position words."><b>Como adaptar</b>Se ficou difícil, volte para 1 tarefa e use um gesto de apoio. Se ficou fácil, inclua objetos e ordens de posição.</div>
 </div>
 </div>
 <div class="pers">
-<span class="tag">Personalização</span>
-<h3>A mesma ideia, ajustada para cada criança</h3>
-<p>O ponto de partida vem da triagem, da conversa de acolhimento e do que você conta ao longo das semanas.</p>
-<div class="age"><b>4 anos</b>Recados com 1 tarefa, objetos grandes e gestos de apoio.</div>
-<div class="age"><b>8 anos</b>Recados com 2 a 3 tarefas, com tempo combinado.</div>
-<div class="age"><b>12 anos</b>Recados com 4 tarefas, em ordem invertida e sem apoio visual.</div>
-<p style="font-size:14px;opacity:.85">Exemplos de como uma atividade pode variar. Não representam um plano real.</p>
+<span class="tag" data-en="Personalization">Personalização</span>
+<h3 data-en="The same idea, adjusted for each child">A mesma ideia, ajustada para cada criança</h3>
+<p data-en="The starting point comes from the intake questionnaire, the welcome conversation and what you share over the weeks.">O ponto de partida vem da triagem, da conversa de acolhimento e do que você conta ao longo das semanas.</p>
+<div class="age" data-en="&lt;b&gt;Age 4&lt;/b&gt;Messages with 1 task, large objects and supportive gestures."><b>4 anos</b>Recados com 1 tarefa, objetos grandes e gestos de apoio.</div>
+<div class="age" data-en="&lt;b&gt;Age 8&lt;/b&gt;Messages with 2 to 3 tasks, with an agreed time."><b>8 anos</b>Recados com 2 a 3 tarefas, com tempo combinado.</div>
+<div class="age" data-en="&lt;b&gt;Age 12&lt;/b&gt;Messages with 4 tasks, in reverse order and with no visual support."><b>12 anos</b>Recados com 4 tarefas, em ordem invertida e sem apoio visual.</div>
+<p data-en="Examples of how an activity can vary. They do not represent a real plan." style="font-size:14px;opacity:.85">Exemplos de como uma atividade pode variar. Não representam um plano real.</p>
 </div>
 </div>
 </div>
 </section>
-
 <!-- 5. MICHELLE -->
 <section class="sec w">
 <div class="wrap auth">
-<div><img class="ph" width="360" height="450" loading="lazy" src="michelle.jpg" alt="Michelle Giannotti Baptista, neuropsicopedagoga"></div>
+<div><img alt="Michelle Giannotti Baptista, neuropsicopedagoga" class="ph" data-alt-en="Michelle Giannotti Baptista, neuropsychopedagogue" height="450" loading="lazy" src="michelle.jpg" width="360"/></div>
 <div>
-<div class="eyebrow">Quem prepara e revisa cada plano</div>
+<div class="eyebrow" data-en="Who prepares and reviews every plan">Quem prepara e revisa cada plano</div>
 <h2 class="h2">Michelle Giannotti Baptista</h2>
-<div class="role">Neuropsicopedagoga</div>
-<p style="margin-top:16px;font-size:18px;color:var(--muted)">Criei a Mentoria para levar o olhar da psicopedagogia para dentro de casa: com método, afeto e orientação para a família. Cada plano é preparado e revisado por mim, para que a criança aprenda no seu ritmo e a rotina de estudos fique mais tranquila.</p>
+<div class="role" data-en="Neuropsychopedagogue">Neuropsicopedagoga</div>
+<p data-en="I created the Mentoria to bring the psychopedagogical perspective into the home: with method, warmth and guidance for the family. Every plan is prepared and reviewed by me, so your child can learn at their own pace and study time becomes calmer." style="margin-top:16px;font-size:18px;color:var(--muted)">Criei a Mentoria para levar o olhar da psicopedagogia para dentro de casa: com método, afeto e orientação para a família. Cada plano é preparado e revisado por mim, para que a criança aprenda no seu ritmo e a rotina de estudos fique mais tranquila.</p>
 <ul class="list">
-<li>Conhece a família na conversa de acolhimento</li>
-<li>Prepara e revisa os planos semanais</li>
-<li>Indica avaliação com outros profissionais quando o caso pede</li>
+<li data-en="Gets to know the family in the welcome conversation">Conhece a família na conversa de acolhimento</li>
+<li data-en="Prepares and reviews the weekly plans">Prepara e revisa os planos semanais</li>
+<li data-en="Recommends assessment by other professionals when the case calls for it">Indica avaliação com outros profissionais quando o caso pede</li>
 </ul>
-<p class="note" style="margin-top:20px">Formação em pedagogia, psicopedagogia, neuropsicopedagogia e neuropsicologia (em curso).</p>
+<p class="note" data-en="Training in pedagogy, psychopedagogy, neuropsychopedagogy and neuropsychology (in progress)." style="margin-top:20px">Formação em pedagogia, psicopedagogia, neuropsicopedagogia e neuropsicologia (em curso).</p>
 </div>
 </div>
 </section>
-
 <!-- 6. ETAPAS -->
 <section class="sec" id="como-funciona">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow">Como funciona</div>
-<h2 class="h2">Do primeiro passo ao acompanhamento, em 5 etapas</h2>
-<p class="lead">Simples para a família, cuidadoso para a criança.</p>
+<div class="eyebrow" data-en="How it works">Como funciona</div>
+<h2 class="h2" data-en="From the first step to ongoing support, in 5 stages">Do primeiro passo ao acompanhamento, em 5 etapas</h2>
+<p class="lead" data-en="Simple for the family, careful for the child.">Simples para a família, cuidadoso para a criança.</p>
 </div>
 <div class="steps">
-<div class="step"><div class="num">1</div><div class="tx"><h3>Você começa a Mentoria</h3><p>Cria a conta, cadastra seu filho e responde a uma triagem sobre as dificuldades e a rotina.</p></div></div>
-<div class="step"><div class="num">2</div><div class="tx"><h3>Conversa de acolhimento</h3><p>Um encontro online de 30 minutos, em horário que você escolhe. É opcional: se preferir, o plano sai com as respostas da triagem.</p></div></div>
-<div class="step"><div class="num">3</div><div class="tx"><h3>Plano semanal personalizado</h3><p>Atividades preparadas e revisadas por neuropsicopedagoga, com objetivo e passo a passo.</p></div></div>
-<div class="step"><div class="num">4</div><div class="tx"><h3>Você conduz em casa</h3><p>Cada atividade leva cerca de 15 minutos. Escolha o formato que cabe na rotina: 1, 2 ou 4 por dia, conforme a idade.</p></div></div>
-<div class="step"><div class="num">5</div><div class="tx"><h3>Acompanhamento mensal</h3><p>Semana após semana, chegam novos planos e você segue com orientação ao longo do mês.</p></div></div>
+<div class="step"><div class="num">1</div><div class="tx"><h3 data-en="You start the Mentoria">Você começa a Mentoria</h3><p data-en="Create your account, register your child and answer an intake questionnaire about the difficulties and the routine.">Cria a conta, cadastra seu filho e responde a uma triagem sobre as dificuldades e a rotina.</p></div></div>
+<div class="step"><div class="num">2</div><div class="tx"><h3 data-en="Welcome conversation">Conversa de acolhimento</h3><p data-en="A 30-minute online meeting, at a time you choose. It is optional: if you prefer, the plan is based on your questionnaire answers.">Um encontro online de 30 minutos, em horário que você escolhe. É opcional: se preferir, o plano sai com as respostas da triagem.</p></div></div>
+<div class="step"><div class="num">3</div><div class="tx"><h3 data-en="Personalized weekly plan">Plano semanal personalizado</h3><p data-en="Activities prepared and reviewed by a neuropsychopedagogue, with a goal and step-by-step instructions.">Atividades preparadas e revisadas por neuropsicopedagoga, com objetivo e passo a passo.</p></div></div>
+<div class="step"><div class="num">4</div><div class="tx"><h3 data-en="You guide it at home">Você conduz em casa</h3><p data-en="Each activity takes about 15 minutes. Choose the format that fits your routine: 1, 2 or 4 a day, depending on age.">Cada atividade leva cerca de 15 minutos. Escolha o formato que cabe na rotina: 1, 2 ou 4 por dia, conforme a idade.</p></div></div>
+<div class="step"><div class="num">5</div><div class="tx"><h3 data-en="Monthly follow-up">Acompanhamento mensal</h3><p data-en="Week after week, new plans arrive and you keep getting guidance throughout the month.">Semana após semana, chegam novos planos e você segue com orientação ao longo do mês.</p></div></div>
 </div>
-<div style="margin-top:44px"><a class="btn" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a></div>
+<div style="margin-top:44px"><a class="btn" data-en="Start the Mentoria" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a></div>
 </div>
 </section>
-
 <!-- 7. DIFERENCIAIS -->
 <section class="sec w">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow">Por que famílias escolhem a Mentoria</div>
-<h2 class="h2">Quatro diferenças que você sente na rotina</h2>
+<div class="eyebrow" data-en="Why families choose the Mentoria">Por que famílias escolhem a Mentoria</div>
+<h2 class="h2" data-en="Four differences you feel in your routine">Quatro diferenças que você sente na rotina</h2>
 </div>
 <div class="grid4">
-<div class="card"><span class="dot"></span><h3>Feito para o seu filho</h3><p>O plano parte da história da criança, e não de uma lista pronta para todos.</p></div>
-<div class="card"><span class="dot"></span><h3>Revisado por profissional</h3><p>Cada plano passa pelo olhar da neuropsicopedagoga antes de chegar até você.</p></div>
-<div class="card"><span class="dot"></span><h3>Cabe na sua rotina</h3><p>Atividades curtas, conforme a idade.</p></div>
-<div class="card"><span class="dot"></span><h3>A família no centro</h3><p>Você conduz e acompanha de perto, fortalecendo o vínculo no processo de aprender.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Made for your child">Feito para o seu filho</h3><p data-en="The plan starts from the child's story, not from a ready-made list for everyone.">O plano parte da história da criança, e não de uma lista pronta para todos.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Reviewed by a professional">Revisado por profissional</h3><p data-en="Every plan goes through the neuropsychopedagogue's eyes before it reaches you.">Cada plano passa pelo olhar da neuropsicopedagoga antes de chegar até você.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Fits your routine">Cabe na sua rotina</h3><p data-en="Short activities, according to age.">Atividades curtas, conforme a idade.</p></div>
+<div class="card"><span class="dot"></span><h3 data-en="Family at the center">A família no centro</h3><p data-en="You guide and follow closely, strengthening the bond in the process of learning.">Você conduz e acompanha de perto, fortalecendo o vínculo no processo de aprender.</p></div>
 </div>
 </div>
 </section>
-
 <!-- 8. PREÇO E CONDIÇÕES -->
 <section class="sec" id="valores">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow">Valores</div>
-<h2 class="h2">Um valor claro, sem fidelidade</h2>
-<p class="lead">Tudo o que sua família precisa em um único acompanhamento mensal.</p>
+<div class="eyebrow" data-en="Pricing">Valores</div>
+<h2 class="h2" data-en="A clear price, no lock-in">Um valor claro, sem fidelidade</h2>
+<p class="lead" data-en="Everything your family needs in a single monthly plan.">Tudo o que sua família precisa em um único acompanhamento mensal.</p>
 </div>
 <div class="price">
 <div class="l">
-<div style="font-weight:700;color:#CFE0CE">Acompanhamento mensal</div>
-<div class="amount">R$ 149,90<small>por mês, por criança</small></div>
-<div class="promo"><b>Oferta de novembro</b>Primeiro mês por R$ 79,90. Digite o cupom <span class="coupon">NOVEMBRO79</span> na tela de pagamento. Válido para quem começar em novembro.</div>
+<div data-en="Monthly follow-up" style="font-weight:700;color:#CFE0CE">Acompanhamento mensal</div>
+<div class="amount" data-en="US$ 149.00&lt;small&gt;per month, per child&lt;/small&gt;">R$ 149,90<small>por mês, por criança</small></div>
+<div class="promo" data-en='&lt;b&gt;November offer&lt;/b&gt;First month for US$ 79.90. Enter the coupon &lt;span class="coupon"&gt;NOVEMBRO79&lt;/span&gt; at checkout. Valid for those who start in November.'><b>Oferta de novembro</b>Primeiro mês por R$ 79,90. Digite o cupom <span class="coupon">NOVEMBRO79</span> na tela de pagamento. Válido para quem começar em novembro.</div>
 </div>
 <div class="r">
 <ul class="list" style="margin:0">
-<li>Conversa de acolhimento online (opcional)</li>
-<li>Plano semanal preparado e revisado por neuropsicopedagoga</li>
-<li>Escolha do formato: 1, 2 ou 4 atividades por dia</li>
-<li>Orientação passo a passo para conduzir em casa</li>
-<li>Sugestões de jogos e materiais quando fizerem sentido</li>
+<li data-en="Online welcome conversation (optional)">Conversa de acolhimento online (opcional)</li>
+<li data-en="Weekly plan prepared and reviewed by a neuropsychopedagogue">Plano semanal preparado e revisado por neuropsicopedagoga</li>
+<li data-en="Choice of format: 1, 2 or 4 activities a day">Escolha do formato: 1, 2 ou 4 atividades por dia</li>
+<li data-en="Step-by-step guidance for you to lead at home">Orientação passo a passo para conduzir em casa</li>
+<li data-en="Suggestions for games and materials when they make sense">Sugestões de jogos e materiais quando fizerem sentido</li>
 </ul>
-<a class="btn" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
-<p class="micro" style="margin:0">Pagamento online seguro. Sem fidelidade.</p>
+<a class="btn" data-en="Start the Mentoria" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
+<p class="micro" data-en="Secure online payment. No lock-in." style="margin:0">Pagamento online seguro. Sem fidelidade.</p>
 </div>
 </div>
 <div class="fine">
-<div><b>Renovação</b>A cobrança é mensal e se renova a cada mês enquanto você mantiver a Mentoria.</div>
-<div><b>Cancelamento</b>Cancele quando quiser. O acesso continua até o fim do período já pago.</div>
-<div><b>Mais de um filho</b>A conta é a mesma, com uma assinatura para cada filho e o mesmo valor mensal.</div>
+<div data-en="&lt;b&gt;Renewal&lt;/b&gt;Billing is monthly and renews each month for as long as you keep the Mentoria."><b>Renovação</b>A cobrança é mensal e se renova a cada mês enquanto você mantiver a Mentoria.</div>
+<div data-en="&lt;b&gt;Cancellation&lt;/b&gt;Cancel anytime. Access continues until the end of the period you already paid for."><b>Cancelamento</b>Cancele quando quiser. O acesso continua até o fim do período já pago.</div>
+<div data-en="&lt;b&gt;More than one child&lt;/b&gt;The account is the same, with one subscription per child at the same monthly price."><b>Mais de um filho</b>A conta é a mesma, com uma assinatura para cada filho e o mesmo valor mensal.</div>
 </div>
+<p class="note en-only" style="margin-top:22px">The Mentoria and its app are currently in Portuguese. Price shown in US dollars (US$).</p>
 <div class="two">
 <div class="panel yes">
-<h3>O que a Mentoria é</h3>
+<h3 data-en="What the Mentoria is">O que a Mentoria é</h3>
 <ul>
-<li>Um suporte psicopedagógico orientado, conduzido pela família em casa.</li>
-<li>Atividades para estimular habilidades de aprendizagem, com acompanhamento.</li>
-<li>Uma orientação clara sobre quando buscar outros profissionais.</li>
+<li data-en="Guided psychopedagogical support, led by the family at home.">Um suporte psicopedagógico orientado, conduzido pela família em casa.</li>
+<li data-en="Activities to stimulate learning skills, with follow-up.">Atividades para estimular habilidades de aprendizagem, com acompanhamento.</li>
+<li data-en="Clear guidance on when to seek other professionals.">Uma orientação clara sobre quando buscar outros profissionais.</li>
 </ul>
 </div>
 <div class="panel no">
-<h3>O que a Mentoria não é</h3>
+<h3 data-en="What the Mentoria is not">O que a Mentoria não é</h3>
 <ul>
-<li>Terapia, avaliação ou diagnóstico.</li>
-<li>Tratamento médico, nem atendimento fonoaudiológico ou psicológico.</li>
-<li>Promessa de cura ou de resultados garantidos. Cada criança tem o seu tempo.</li>
+<li data-en="Therapy, assessment or diagnosis.">Terapia, avaliação ou diagnóstico.</li>
+<li data-en="Medical treatment, or speech-language or psychological care.">Tratamento médico, nem atendimento fonoaudiológico ou psicológico.</li>
+<li data-en="A promise of a cure or guaranteed results. Every child has their own time.">Promessa de cura ou de resultados garantidos. Cada criança tem o seu tempo.</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-
 <!-- 9. PERGUNTAS -->
 <section class="sec w" id="perguntas">
 <div class="wrap">
 <div class="head">
-<div class="eyebrow">Perguntas frequentes</div>
-<h2 class="h2">As dúvidas mais comuns antes de começar</h2>
+<div class="eyebrow" data-en="Frequently asked questions">Perguntas frequentes</div>
+<h2 class="h2" data-en="The most common questions before getting started">As dúvidas mais comuns antes de começar</h2>
 </div>
 <div class="faq">
 <div class="col">
-<details><summary>Preciso ter formação para aplicar as atividades?</summary><p>Não. Cada plano traz o passo a passo, e a família conduz com a orientação da Mentoria.</p></details>
-<details><summary>Meu filho já tem diagnóstico ou faz terapia. Posso usar a Mentoria?</summary><p>Pode, como complemento. A Mentoria não substitui o acompanhamento que já existe. Vale conversar com os outros profissionais sobre as atividades.</p></details>
-<details><summary>A Mentoria substitui terapia ou avaliação?</summary><p>Não. É um suporte psicopedagógico orientado e não faz diagnóstico. Quando for preciso, a família é orientada a buscar avaliação profissional.</p></details>
-<details><summary>Quanto tempo preciso por dia?</summary><p>Cada atividade leva cerca de 15 minutos. O plano da semana tem 4 atividades: no formato de 1 por dia, são só 4 dias por semana. Conforme a idade, você também pode escolher 2 por dia ou, a partir dos 9 anos, as 4 no mesmo dia.</p></details>
-<details><summary>Em quanto tempo vou ver resultados?</summary><p>Cada criança tem o seu ritmo, e não é possível prometer prazos ou resultados. O que a Mentoria oferece é constância: atividades bem escolhidas, toda semana, com orientação.</p></details>
+<details><summary data-en="Do I need training to run the activities?">Preciso ter formação para aplicar as atividades?</summary><p data-en="No. Each plan comes with a step-by-step guide, and the family leads with the Mentoria's guidance.">Não. Cada plano traz o passo a passo, e a família conduz com a orientação da Mentoria.</p></details>
+<details><summary data-en="My child already has a diagnosis or is in therapy. Can I use the Mentoria?">Meu filho já tem diagnóstico ou faz terapia. Posso usar a Mentoria?</summary><p data-en="Yes, as a complement. The Mentoria does not replace the care your child already receives. It is worth talking to the other professionals about the activities.">Pode, como complemento. A Mentoria não substitui o acompanhamento que já existe. Vale conversar com os outros profissionais sobre as atividades.</p></details>
+<details><summary data-en="Does the Mentoria replace therapy or assessment?">A Mentoria substitui terapia ou avaliação?</summary><p data-en="No. It is guided psychopedagogical support and does not diagnose. When needed, the family is guided to seek a professional assessment.">Não. É um suporte psicopedagógico orientado e não faz diagnóstico. Quando for preciso, a família é orientada a buscar avaliação profissional.</p></details>
+<details><summary data-en="How much time do I need each day?">Quanto tempo preciso por dia?</summary><p data-en="Each activity takes about 15 minutes. The weekly plan has 4 activities: with the 1-a-day format, that is only 4 days a week. Depending on age, you can also choose 2 a day or, from age 9, all 4 on the same day.">Cada atividade leva cerca de 15 minutos. O plano da semana tem 4 atividades: no formato de 1 por dia, são só 4 dias por semana. Conforme a idade, você também pode escolher 2 por dia ou, a partir dos 9 anos, as 4 no mesmo dia.</p></details>
+<details><summary data-en="How long until I see results?">Em quanto tempo vou ver resultados?</summary><p data-en="Every child has their own pace, and it is not possible to promise timelines or results. What the Mentoria offers is consistency: well-chosen activities, every week, with guidance.">Cada criança tem o seu ritmo, e não é possível prometer prazos ou resultados. O que a Mentoria oferece é constância: atividades bem escolhidas, toda semana, com orientação.</p></details>
 </div>
 <div class="col">
-<details><summary>E se meu filho não quiser fazer?</summary><p>As atividades são curtas e lúdicas. Se houver muita resistência, conte no acompanhamento: cada semana traz um novo plano, e o caminho vai sendo ajustado.</p></details>
-<details><summary>Preciso comprar materiais?</summary><p>As atividades usam, sempre que possível, objetos da casa. Alguns planos podem sugerir jogos ou materiais para apoiar o trabalho.</p></details>
-<details><summary>Como funcionam o pagamento e o cancelamento?</summary><p>O pagamento é online e mensal. Você pode cancelar quando quiser, e o acesso continua até o fim do período já pago.</p></details>
-<details><summary>Tenho mais de um filho. Como funciona?</summary><p>Vocês usam a mesma conta, com um acompanhamento para cada filho e o mesmo valor mensal.</p></details>
-<details><summary>Como cuidam dos dados do meu filho?</summary><p>As informações que você compartilha são usadas para montar os planos e acompanhar a Mentoria. Você pode pedir a exclusão do cadastro falando com a Michelle.</p></details>
+<details><summary data-en="What if my child doesn't want to do it?">E se meu filho não quiser fazer?</summary><p data-en="The activities are short and playful. If there is a lot of resistance, tell us in the follow-up: each week brings a new plan, and the path is adjusted along the way.">As atividades são curtas e lúdicas. Se houver muita resistência, conte no acompanhamento: cada semana traz um novo plano, e o caminho vai sendo ajustado.</p></details>
+<details><summary data-en="Do I need to buy materials?">Preciso comprar materiais?</summary><p data-en="Whenever possible, the activities use household objects. Some plans may suggest games or materials to support the work.">As atividades usam, sempre que possível, objetos da casa. Alguns planos podem sugerir jogos ou materiais para apoiar o trabalho.</p></details>
+<details><summary data-en="How do payment and cancellation work?">Como funcionam o pagamento e o cancelamento?</summary><p data-en="Payment is online and monthly. You can cancel anytime, and access continues until the end of the period you already paid for.">O pagamento é online e mensal. Você pode cancelar quando quiser, e o acesso continua até o fim do período já pago.</p></details>
+<details><summary data-en="I have more than one child. How does it work?">Tenho mais de um filho. Como funciona?</summary><p data-en="You use the same account, with one plan for each child at the same monthly price.">Vocês usam a mesma conta, com um acompanhamento para cada filho e o mesmo valor mensal.</p></details>
+<details><summary data-en="How do you handle my child's data?">Como cuidam dos dados do meu filho?</summary><p data-en="The information you share is used to build the plans and follow the Mentoria. You can ask for your registration to be deleted by talking to Michelle.">As informações que você compartilha são usadas para montar os planos e acompanhar a Mentoria. Você pode pedir a exclusão do cadastro falando com a Michelle.</p></details>
 </div>
 </div>
 </div>
 </section>
-
 <!-- 10. CHAMADA FINAL -->
 <section class="sec final">
 <div class="wrap">
-<div class="eyebrow" style="color:#CFE0CE">Então, a resposta é sim?</div>
-<h2>Dê o primeiro passo por um aprender mais leve</h2>
-<p>Comece a Mentoria e receba um plano pensado para o seu filho, com orientação de quem entende de aprendizagem.</p>
-<a class="btn light" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
-<p style="font-size:15.5px">Prefere conversar antes? <a class="w" href="https://wa.me/message/4W5EBGGFLVN3A1">Fale com a Michelle pelo WhatsApp</a></p>
+<div class="eyebrow" data-en="So, is the answer yes?" style="color:#CFE0CE">Então, a resposta é sim?</div>
+<h2 data-en="Take the first step toward lighter learning">Dê o primeiro passo por um aprender mais leve</h2>
+<p data-en="Start the Mentoria and receive a plan designed for your child, guided by someone who understands learning.">Comece a Mentoria e receba um plano pensado para o seu filho, com orientação de quem entende de aprendizagem.</p>
+<a class="btn light" data-en="Start the Mentoria" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
+<p data-en='Prefer to talk first? &lt;a class="w" href="https://wa.me/message/4W5EBGGFLVN3A1"&gt;Message Michelle on WhatsApp&lt;/a&gt;' style="font-size:15.5px">Prefere conversar antes? <a class="w" href="https://wa.me/message/4W5EBGGFLVN3A1">Fale com a Michelle pelo WhatsApp</a></p>
 </div>
 </section>
-
 <footer class="foot">
 <div class="wrap">
 <div class="c">
 <b style="color:#fff;font-family:'Fraunces',serif;font-size:18px">Mentoria A.P.R.E.N.D.E.R.</b>
-<span>Suporte psicopedagógico orientado. Não substitui avaliação e nem diagnóstico profissional.</span>
-<span>Michelle Giannotti Baptista, neuropsicopedagoga.</span>
+<span data-en="Guided psychopedagogical support. Does not replace professional assessment or diagnosis.">Suporte psicopedagógico orientado. Não substitui avaliação e nem diagnóstico profissional.</span>
+<span data-en="Michelle Giannotti Baptista, neuropsychopedagogue.">Michelle Giannotti Baptista, neuropsicopedagoga.</span>
 </div>
 <div class="c">
 <a href="https://www.instagram.com/psicopedagogamichellegb">Instagram: @psicopedagogamichellegb</a>
@@ -518,12 +515,38 @@ body{font-size:16.5px;padding-bottom:84px}
 </div>
 </div>
 </footer>
-
 <div class="sticky">
-<div class="t"><b>Oferta de novembro</b>1º mês por R$ 79,90</div>
-<a class="btn" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
+<div class="t" data-en="&lt;b&gt;November offer&lt;/b&gt;1st month for US$ 79.90"><b>Oferta de novembro</b>1º mês por R$ 79,90</div>
+<a class="btn" data-en="Start the Mentoria" href="https://mentoria-aprender-hkcu.vercel.app">Começar a Mentoria</a>
 </div>
-
 </div>
+<script>
+(function(){
+var d=document,TT={pt:d.title,en:"Mentoria A.P.R.E.N.D.E.R. | Guided psychopedagogical support"};
+function set(l){
+var en=l==="en";
+d.documentElement.lang=en?"en":"pt-BR";
+d.body.classList.toggle("en",en);
+d.title=TT[l];
+d.querySelectorAll("[data-en]").forEach(function(e){
+if(e.getAttribute("data-pt")===null)e.setAttribute("data-pt",e.innerHTML);
+e.innerHTML=en?e.getAttribute("data-en"):e.getAttribute("data-pt");
+});
+d.querySelectorAll("[data-alt-en]").forEach(function(e){
+if(e.getAttribute("data-alt-pt")===null)e.setAttribute("data-alt-pt",e.getAttribute("alt")||"");
+e.setAttribute("alt",en?e.getAttribute("data-alt-en"):e.getAttribute("data-alt-pt"));
+});
+d.querySelectorAll(".lang button").forEach(function(b){
+var on=b.getAttribute("data-l")===l;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false");
+});
+try{localStorage.setItem("lang",l)}catch(x){}
+}
+var m=location.search.match(/[?&]lang=(en|pt)/),q=m?m[1]:null,st=null;
+try{st=localStorage.getItem("lang")}catch(x){}
+d.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){set(b.getAttribute("data-l"))})});
+var init=q||st||"pt";
+if(init==="en")set("en");
+})();
+</script>
 </body>
 </html>
