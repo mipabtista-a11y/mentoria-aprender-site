@@ -58,7 +58,7 @@ a{color:var(--green)}
 .micro{font-size:14px;color:var(--muted);margin-top:14px}
 .photo{position:sticky;top:96px}
 .photo:before{content:"";position:absolute;inset:26px -16px -16px 26px;background:var(--sage2);border-radius:38px;z-index:0}
-.hp{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:32px;box-shadow:0 18px 44px rgba(47,74,56,.18)}
+.hp{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;border-radius:32px;box-shadow:0 18px 44px rgba(47,74,56,.18)}
 .cap{position:absolute;z-index:2;left:-18px;bottom:30px;background:var(--white);border-radius:18px;padding:14px 20px;box-shadow:0 10px 28px rgba(47,74,56,.16);display:flex;flex-direction:column;line-height:1.35}
 .cap b{font-family:'Fraunces',serif;font-size:17px;color:var(--ink)}
 .cap span{font-size:14px;color:var(--green);font-weight:700}
@@ -121,7 +121,7 @@ a{color:var(--green)}
 .tag{align-self:flex-start;background:var(--sand);color:var(--green-d);font-weight:700;font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;border-radius:8px;padding:4px 10px}
 /* autoridade */
 .auth{display:grid;grid-template-columns:minmax(0,0.78fr) minmax(0,1.22fr);gap:56px;align-items:center}
-.ph{width:100%;max-width:360px;height:450px;object-fit:cover;object-position:center top;border-radius:180px 180px 28px 28px;display:block;margin:0 auto;box-shadow:0 18px 44px rgba(47,74,56,.16)}
+.ph{width:100%;max-width:340px;height:auto;aspect-ratio:9/16;object-fit:cover;object-position:center top;border-radius:28px;display:block;margin:0 auto;box-shadow:0 18px 44px rgba(47,74,56,.16)}
 .auth h2{margin:10px 0 6px}
 .role{font-weight:700;color:var(--green);font-size:17px}
 .list{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
@@ -208,7 +208,7 @@ body{font-size:16.5px;padding-bottom:84px}
 .amount{font-size:46px}
 .amount small{display:block;margin:8px 0 0}
 .pivot p{font-size:19px}
-.ph{height:400px}
+.ph{max-width:300px}
 .photo:before{inset:20px -12px -12px 20px}
 .cap{left:12px;bottom:22px}
 .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--paper);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));gap:12px;align-items:center;box-shadow:0 -6px 20px rgba(47,74,56,.12)}
@@ -219,7 +219,8 @@ body{font-size:16.5px;padding-bottom:84px}
 }
 
 .lang{display:flex;gap:3px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:3px;flex:none}
-.lang button{border:0;background:transparent;font:700 13px/1 'Nunito',sans-serif;color:var(--muted);padding:8px 13px;border-radius:999px;cursor:pointer;min-height:34px}
+.lang .fl{width:18px;height:18px;border-radius:50%;flex:none;display:block}
+.lang button{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;font:700 13px/1 'Nunito',sans-serif;color:var(--muted);padding:8px 13px;border-radius:999px;cursor:pointer;min-height:34px}
 .lang button.on{background:var(--green);color:#fff}
 .en-only{display:none}
 body.en .pt-only{display:none}
@@ -241,10 +242,10 @@ body.en .en-only{display:block}
 <a class="l" data-en="Example" href="#exemplo">Exemplo</a>
 <a class="l" data-en="Pricing" href="#valores">Valores</a>
 <a class="l" data-en="FAQ" href="#perguntas">Perguntas</a>
-<a class="l" data-en="Create account" href="https://mentoria-aprender-hkcu.vercel.app">Criar conta</a>
+<a class="l" data-en="Create my access" href="https://mentoria-aprender-hkcu.vercel.app">Criar meu acesso</a>
 <a class="btn" data-en="Chat now" href="https://wa.me/message/4W5EBGGFLVN3A1">Converse agora</a>
 </nav>
-<div aria-label="Idioma / Language" class="lang" role="group"><button aria-pressed="true" class="on" data-l="pt" type="button">PT</button><button aria-pressed="false" data-l="en" type="button">EN</button></div>
+<div aria-label="Idioma / Language" class="lang" role="group"><button aria-label="Português" aria-pressed="true" class="on" data-l="pt" type="button"><svg aria-hidden="true" class="fl" viewbox="0 0 24 24"><defs><clippath id="fbr"><circle cx="12" cy="12" r="12"></circle></clippath></defs><g clip-path="url(#fbr)"><rect fill="#009B3A" height="24" width="24"></rect><path d="M12 3.6 22 12 12 20.4 2 12z" fill="#FEDF00"></path><circle cx="12" cy="12" fill="#002776" r="4.6"></circle><path d="M7.7 11q4.6-1.3 8.7 1.6" fill="none" stroke="#fff" stroke-width="1"></path></g></svg>PT</button><button aria-label="English" aria-pressed="false" data-l="en" type="button"><svg aria-hidden="true" class="fl" viewbox="0 0 24 24"><defs><clippath id="fus"><circle cx="12" cy="12" r="12"></circle></clippath></defs><g clip-path="url(#fus)"><rect fill="#fff" height="24" width="24"></rect><rect fill="#B22234" height="3.43" width="24" y="0.0"></rect><rect fill="#B22234" height="3.43" width="24" y="6.86"></rect><rect fill="#B22234" height="3.43" width="24" y="13.72"></rect><rect fill="#B22234" height="3.43" width="24" y="20.58"></rect><rect fill="#3C3B6E" height="13.7" width="12"></rect><circle cx="3" cy="3" fill="#fff" r=".7"></circle><circle cx="3" cy="6.5" fill="#fff" r=".7"></circle><circle cx="3" cy="10" fill="#fff" r=".7"></circle><circle cx="6" cy="3" fill="#fff" r=".7"></circle><circle cx="6" cy="6.5" fill="#fff" r=".7"></circle><circle cx="6" cy="10" fill="#fff" r=".7"></circle><circle cx="9" cy="3" fill="#fff" r=".7"></circle><circle cx="9" cy="6.5" fill="#fff" r=".7"></circle><circle cx="9" cy="10" fill="#fff" r=".7"></circle></g></svg>EN</button></div>
 </div>
 </header>
 <!-- 1. PRIMEIRA TELA -->
@@ -257,7 +258,7 @@ body.en .en-only{display:block}
 <p class="sub" data-en="Every week, your family receives an activity plan designed for your child, prepared and reviewed by a neuropsychopedagogue (a specialist in learning and the brain). You guide it at home, with step-by-step instructions and professional support.">Toda semana, sua família recebe um plano de atividades pensado para a criança, preparado e revisado por uma neuropsicopedagoga. Você conduz em casa, com passo a passo e orientação profissional.</p>
 <div class="cta">
 <a class="btn" data-en="Chat now" href="https://wa.me/message/4W5EBGGFLVN3A1">Converse agora</a>
-<a class="btn ghost" data-en="I've decided: create my account" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar minha conta</a>
+<a class="btn ghost" data-en="I've decided: create my access" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar meu acesso</a>
 <a class="lnk" data-en="Learn more" href="#como-funciona">Saiba mais</a>
 </div>
 <div class="offer pt-only"><span data-en="&lt;b&gt;November offer:&lt;/b&gt; first month for US$ 79.90 with the coupon &lt;b&gt;NOVEMBRO79&lt;/b&gt;"><b>Oferta de novembro:</b> primeiro mês por R$ 79,90 com o cupom <b>NOVEMBRO79</b></span></div>
@@ -265,7 +266,7 @@ body.en .en-only{display:block}
 <p class="micro en-only">Note: the Mentoria and its app are currently in Portuguese.</p>
 </div>
 <div class="photo">
-<img alt="Michelle Giannotti Baptista, neuropsicopedagoga, sorrindo em seu consultório" class="hp" data-alt-en="Michelle Giannotti Baptista, neuropsychopedagogue, smiling in her office" fetchpriority="high" height="900" src="michelle-consultorio.jpg" width="720"/>
+<img alt="Michelle Giannotti Baptista, neuropsicopedagoga, atendendo online pelo celular" class="hp" data-alt-en="Michelle Giannotti Baptista, neuropsychopedagogue, meeting online by phone" fetchpriority="high" height="1280" src="michelle-topo.jpg" width="720"/>
 <div class="cap"><b>Michelle Giannotti Baptista</b><span data-en="Neuropsychopedagogue">Neuropsicopedagoga</span></div>
 </div>
 </div>
@@ -300,7 +301,7 @@ body.en .en-only{display:block}
 <p class="note" data-en="Format of 1 activity a day. Depending on age, you can also choose 2 a day or, from age 9, do all 4 activities of the week on the same day.">Formato de 1 atividade por dia. Conforme a idade, também é possível escolher 2 por dia ou, a partir dos 9 anos, fazer as 4 atividades da semana no mesmo dia.</p>
 <div class="cta2" style="margin-top:30px">
 <a class="btn" data-en="Chat now" href="https://wa.me/message/4W5EBGGFLVN3A1">Converse agora</a>
-<a class="btn ghost" data-en="I've decided: create my account" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar minha conta</a>
+<a class="btn ghost" data-en="I've decided: create my access" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar meu acesso</a>
 </div>
 </div>
 </section>
@@ -378,7 +379,7 @@ body.en .en-only{display:block}
 <!-- 5. MICHELLE -->
 <section class="sec w">
 <div class="wrap auth">
-<div><img alt="Michelle Giannotti Baptista, neuropsicopedagoga" class="ph" data-alt-en="Michelle Giannotti Baptista, neuropsychopedagogue" height="450" loading="lazy" src="michelle.jpg" width="360"/></div>
+<div><img alt="Michelle Giannotti Baptista, neuropsicopedagoga" class="ph" data-alt-en="Michelle Giannotti Baptista, neuropsychopedagogue" height="1280" loading="lazy" src="michelle-secao.jpg" width="720"/></div>
 <div>
 <div class="eyebrow" data-en="Who prepares and reviews every plan">Quem prepara e revisa cada plano</div>
 <h2 class="h2">Michelle Giannotti Baptista</h2>
@@ -410,7 +411,7 @@ body.en .en-only{display:block}
 </div>
 <div class="cta2" style="margin-top:44px">
 <a class="btn" data-en="Chat now" href="https://wa.me/message/4W5EBGGFLVN3A1">Converse agora</a>
-<a class="btn ghost" data-en="I've decided: create my account" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar minha conta</a>
+<a class="btn ghost" data-en="I've decided: create my access" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar meu acesso</a>
 </div>
 </div>
 </section>
@@ -453,7 +454,7 @@ body.en .en-only{display:block}
 </ul>
 <div class="cta2">
 <a class="btn" data-en="Chat now" href="https://wa.me/message/4W5EBGGFLVN3A1">Converse agora</a>
-<a class="btn ghost" data-en="I've decided: create my account" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar minha conta</a>
+<a class="btn ghost" data-en="I've decided: create my access" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar meu acesso</a>
 </div>
 <p class="micro" data-en="Secure online payment. No lock-in." style="margin:0">Pagamento online seguro. Sem fidelidade.</p>
 </div>
@@ -518,7 +519,7 @@ body.en .en-only{display:block}
 <p data-en="Start the Mentoria and receive a plan designed for your child, guided by someone who understands learning.">Comece a Mentoria e receba um plano pensado para o seu filho, com orientação de quem entende de aprendizagem.</p>
 <div class="cta2">
 <a class="btn light" data-en="Chat now" href="https://wa.me/message/4W5EBGGFLVN3A1">Converse agora</a>
-<a class="btn ghostw" data-en="I've decided: create my account" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar minha conta</a>
+<a class="btn ghostw" data-en="I've decided: create my access" href="https://mentoria-aprender-hkcu.vercel.app">Já decidi: criar meu acesso</a>
 </div>
 <p data-en="Quick replies on WhatsApp. If you've already decided, you can create your account directly." style="font-size:15.5px">Resposta rápida pelo WhatsApp. Se já decidiu, você pode criar sua conta direto.</p>
 </div>
@@ -539,7 +540,7 @@ body.en .en-only{display:block}
 </div>
 </footer>
 <div class="sticky">
-<a class="btn ghost" data-en="Create account" href="https://mentoria-aprender-hkcu.vercel.app">Criar conta</a>
+<a class="btn ghost" data-en="Create my access" href="https://mentoria-aprender-hkcu.vercel.app">Criar meu acesso</a>
 <a class="btn w" data-en="Chat now" href="https://wa.me/message/4W5EBGGFLVN3A1">Converse agora</a>
 </div>
 </div>
