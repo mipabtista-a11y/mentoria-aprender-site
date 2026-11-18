@@ -35,6 +35,13 @@ a{color:var(--green)}
 .eyebrow{font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green)}
 .h2{font-size:clamp(27px,4.3vw,40px);font-weight:600}
 .lead{font-size:18px;color:var(--muted);max-width:680px}
+.what .how{max-width:760px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:30px 32px}
+.what .how-t{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px;color:var(--green-d);margin:0 0 16px}
+.what .how-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.what .how-l li{position:relative;padding-left:34px;font-size:17.5px}
+.what .how-l li::before{content:'✓';position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
+.what .why{max-width:760px;margin:26px 0 0;font-size:18px;font-weight:600;color:var(--green-d);background:var(--sage);border-radius:20px;padding:20px 26px}
+@media(max-width:700px){.what .how{padding:24px 20px}.what .how-t{font-size:19px}.what .how-l li{font-size:16.5px}}
 .head{display:flex;flex-direction:column;gap:14px;margin-bottom:46px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 32px;border-radius:999px;background:var(--green);color:#fff;font-weight:700;font-size:17px;text-decoration:none;text-align:center;box-shadow:0 8px 20px rgba(75,115,85,.22)}
 .btn:hover{background:#3F6249;color:#fff}
@@ -59,7 +66,7 @@ a{color:var(--green)}
 .micro{font-size:14px;color:var(--muted);margin-top:14px}
 .photo{position:sticky;top:96px}
 .photo:before{content:"";position:absolute;inset:26px -16px -16px 26px;background:var(--sage2);border-radius:38px;z-index:0}
-.hp{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;border-radius:32px;box-shadow:0 18px 44px rgba(47,74,56,.18)}
+.hp{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 46%;border-radius:32px;box-shadow:0 18px 44px rgba(47,74,56,.18)}
 .cap{position:absolute;z-index:2;left:-18px;bottom:30px;background:var(--white);border-radius:18px;padding:14px 20px;box-shadow:0 10px 28px rgba(47,74,56,.16);display:flex;flex-direction:column;line-height:1.35}
 .cap b{font-family:'Fraunces',serif;font-size:17px;color:var(--ink)}
 .cap span{font-size:14px;color:var(--green);font-weight:700}
@@ -87,7 +94,7 @@ a{color:var(--green)}
 /* pergunta gancho */
 .hook{background:var(--green-d);border-radius:22px;padding:22px 26px;margin-bottom:28px;max-width:580px;box-shadow:0 14px 34px rgba(47,74,56,.22)}
 .hook .hq{display:inline-block;font-weight:700;font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;color:#CFE0CE}
-.hook p{font-family:'Fraunces',Georgia,serif;font-size:clamp(21px,3.2vw,27px);line-height:1.25;font-weight:600;color:#fff;margin:0;text-wrap:balance;text-align:center}
+.hook p{font-family:'Fraunces',Georgia,serif;font-size:clamp(28px,4.6vw,38px);line-height:1.25;font-weight:600;color:#fff;margin:0;text-wrap:balance;text-align:center}
 .hook p b{color:#F0E3BE;font-weight:700}
 .hook .ha{display:block;margin-top:12px;font-size:15.5px;line-height:1.5;color:#DCE6D8}
 /* ritmo */
@@ -261,11 +268,10 @@ body.en .en-only{display:block}
 <a class="btn ghost" data-en="I've decided: create my access" href="https://app.mentoriaaprender.com.br">Já decidi: criar meu acesso</a>
 </div>
 <p class="micro" data-en="For children and teens from 2 to 14 years old. No lock-in: cancel anytime.">Para crianças e adolescentes de 2 a 14 anos. Sem fidelidade: cancele quando quiser.</p>
-<div class="offer pt-only"><span><b>Oferta de novembro:</b> primeiro mês por R$ 79,90 com o cupom <b>NOVEMBRO79</b></span></div>
 <p class="micro en-only">Note: the Mentoria and its app are currently in Portuguese.</p>
 </div>
 <div class="photo">
-<img alt="Michelle Giannotti Baptista, neuropsicopedagoga, atendendo online pelo celular" class="hp" data-alt-en="Michelle Giannotti Baptista, neuropsychopedagogue, meeting online by phone" fetchpriority="high" height="1280" src="michelle-topo.jpg" width="720"/>
+<img alt="Michelle Giannotti Baptista, neuropsicopedagoga, trabalhando em seu notebook" class="hp" data-alt-en="Michelle Giannotti Baptista, neuropsychopedagogue, working at her laptop" fetchpriority="high" height="1280" src="michelle-topo.jpg" width="720"/>
 <div class="cap"><b>Michelle Giannotti Baptista</b><span data-en="Neuropsychopedagogue">Neuropsicopedagoga</span></div>
 </div>
 </div>
@@ -276,6 +282,25 @@ body.en .en-only{display:block}
 <div class="ti" data-en='&lt;span class="ck"&gt;✓&lt;/span&gt;You guide it at home, step by step'><span class="ck">✓</span>Você conduz em casa, com passo a passo</div>
 <div class="ti" data-en='&lt;span class="ck"&gt;✓&lt;/span&gt;No lock-in, cancel anytime'><span class="ck">✓</span>Sem fidelidade, cancele quando quiser</div>
 <div class="ti" data-en='&lt;span class="ck"&gt;✓&lt;/span&gt;Secure online payment'><span class="ck">✓</span>Pagamento online seguro</div>
+</div>
+</section>
+<!-- O QUE É A MENTORIA -->
+<section class="sec w what" id="o-que-e">
+<div class="wrap">
+<div class="head">
+<div class="eyebrow" data-en="Get to know the Mentoria">Conheça a Mentoria</div>
+<h2 class="h2" data-en="What is the Mentoria A.P.R.E.N.D.E.R.">O que é a Mentoria A.P.R.E.N.D.E.R.</h2>
+<p class="lead" data-en="The Mentoria A.P.R.E.N.D.E.R. is remote psychopedagogical support, done at home.">A Mentoria A.P.R.E.N.D.E.R. é um acompanhamento psicopedagógico a distância, feito em casa.</p>
+</div>
+<div class="how">
+<p class="how-t" data-en="How it works:">Funciona assim:</p>
+<ul class="how-l">
+<li data-en="Every week you receive an activity plan through the app, designed for your child and prepared and reviewed by me, a neuropsychopedagogue.">Toda semana você recebe pelo app um plano de atividades pensado para o seu filho, preparado e revisado por mim, neuropsicopedagoga.</li>
+<li data-en="You do the activities together with your child, a little each day.">Você faz as atividades junto com a criança, um pouco por dia.</li>
+<li data-en="I follow everything through the app and guide you every step of the way.">Eu acompanho tudo pelo app e oriento cada passo.</li>
+</ul>
+</div>
+<p class="why" data-en="Family participation is what makes it work: children learn better with someone they trust, and short, frequent practice strengthens learning far more.">A participação da família é o que faz funcionar: a criança aprende melhor com quem ela confia, e a prática curta e frequente fortalece muito mais o aprendizado.</p>
 </div>
 </section>
 <!-- RITMO E ECONOMIA -->
@@ -441,7 +466,6 @@ body.en .en-only{display:block}
 <div class="l">
 <div data-en="Monthly follow-up" style="font-weight:700;color:#CFE0CE">Acompanhamento mensal</div>
 <div class="amount" data-en="US$ 79.90&lt;small&gt;per month, per child&lt;/small&gt;">R$ 149,90<small>por mês, por criança</small></div>
-<div class="promo pt-only" data-en='&lt;b&gt;November offer&lt;/b&gt;First month for US$ 79.90. Enter the coupon &lt;span class="coupon"&gt;NOVEMBRO79&lt;/span&gt; at checkout. Valid for those who start in November.'><b>Oferta de novembro</b>Primeiro mês por R$ 79,90. Digite o cupom <span class="coupon">NOVEMBRO79</span> na tela de pagamento. Válido para quem começar em novembro.</div>
 </div>
 <div class="r">
 <ul class="list" style="margin:0">
